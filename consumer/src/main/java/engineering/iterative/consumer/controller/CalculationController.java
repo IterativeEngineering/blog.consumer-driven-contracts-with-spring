@@ -19,12 +19,12 @@ public class CalculationController {
     private final RestTemplate restTemplate;
 
     @GetMapping("/average")
-    public Double averageOfTwoDigits(@RequestParam("number1") Integer n1, @RequestParam("number2") Integer n2) {
+    public Double averageOfTwoDigits(@RequestParam("argA") Integer argA, @RequestParam("argB") Integer argB) {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("Content-Type", "application/json");
 
         ResponseEntity<String> responseEntity = restTemplate.exchange(
-                "http://localhost:8090/sum?number1=" + n1 + "&number2=" + n2,
+                "http://localhost:8090/sum?argA=" + argA + "&argB=" + argB,
                 HttpMethod.GET,
                 new HttpEntity<>(httpHeaders),
                 String.class);

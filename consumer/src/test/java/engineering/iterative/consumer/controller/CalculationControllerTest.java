@@ -32,7 +32,7 @@ class CalculationControllerTest {
 
     mockMvc
         .perform(
-            MockMvcRequestBuilders.get("/average?number1=2&number2=3")
+            MockMvcRequestBuilders.get("/average?argA=2&argB=3")
                 .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk())
         .andExpect(content().string("2.5"));

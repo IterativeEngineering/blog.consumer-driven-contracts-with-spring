@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MathController {
 
     @GetMapping("/sum")
-    public int sumNumbers(@RequestParam("number1") Integer n1,
-                          @RequestParam("number2") Integer n2) {
-        return n1 + n2;
+    public int sumNumbers(@RequestParam("argA") Integer argA,
+                          @RequestParam("argB") Integer argB) {
+        return argA + argB;
     }
 }

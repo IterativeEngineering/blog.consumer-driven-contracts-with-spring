@@ -3,13 +3,13 @@ package contracts
 import org.springframework.cloud.contract.spec.Contract
 
 Contract.make {
-    description "Should return sum of given numbers"
+    description "Should return sum of argA and argB"
     request {
         method GET()
         url("/sum") {
             queryParameters {
-                parameter("number1", "2")
-                parameter("number2", "3")
+                parameter("argA", "2")
+                parameter("argB", "3")
             }
         }
     }
